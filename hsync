@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Entry point: ./hsync --help. Local settings (hsync.local.env) are loaded by health_sync/config.py.
+set -euo pipefail
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+umask 077
+export PYTHONPATH="$DIR${PYTHONPATH:+:$PYTHONPATH}"
+exec "$DIR/.venv/bin/python" -m health_sync "$@"

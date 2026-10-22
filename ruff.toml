@@ -1,0 +1,10 @@
+target-version = "py313"
+line-length = 120
+extend-exclude = [".venv", "raw", "secrets"]
+
+[lint]
+select = ["E", "F", "W", "B", "S", "UP"]
+ignore = ["E501", "UP015", "UP017", "UP031", "B007"]
+
+[lint.per-file-ignores]
+"tests/*" = ["S101", "S105", "S104", "S108", "S603", "S607"]

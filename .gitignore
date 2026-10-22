@@ -1,0 +1,47 @@
+# --- secrets / credentials (never commit) ---
+secrets/
+token*
+*token*.json
+client_secret*
+*.pem
+*.key
+.env
+.env*
+# local install settings (paths, timezone), see README "Local config file"
+hsync.local.env
+*.local.env
+auth_url.txt
+pending_auth*.json
+# --- runtime state, raw personal data, logs, locks ---
+state.json
+raw/
+sync.log
+sync.log*
+*.log
+*.lock
+.sync.lock
+audit/
+*.audit.jsonl
+# --- data / output files ---
+daily/
+*.csv
+*.csv.*
+*.api_cells.json
+data/
+# Google Takeout exports
+Takeout/
+# any JSON by default; only explicitly allowed public docs below
+*.json
+!docs/
+!docs/discovery_v4_rev20261020.json
+# --- tooling ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.tmp-*
